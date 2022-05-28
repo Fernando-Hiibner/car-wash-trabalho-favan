@@ -1,0 +1,78 @@
+@model IEnumerable<CarWash.Models.CarroModel>
+
+@{
+    ViewData["Title"] = "Carro";
+}
+
+<h1>Carro</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Proprietario)
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Proprietario.Nome)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration: none;">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" style="text-decoration: none;">
+                        <i class="fa-solid fa-info"></i>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration: none;">
+                        <i class="fa-solid fa-trash" style="color: red;"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,60 @@
+@model IEnumerable<CarWash.Models.ServicoModel>
+
+@{
+    ViewData["Title"] = "Serviço";
+}
+
+<h1>Serviço</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" style="text-decoration: none;">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" style="text-decoration: none;">
+                        <i class="fa-solid fa-info"></i>
+                    </a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="text-decoration: none;">
+                        <i class="fa-solid fa-trash" style="color: red;"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
