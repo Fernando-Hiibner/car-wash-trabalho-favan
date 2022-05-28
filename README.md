@@ -1,9 +1,9 @@
 # Atividade Final: Projeto de Desenvolvimento de Sistemas de Informação
 
-###Instruções
+### Instruções
 Os alunos, organizados em equipes de até 7 integrantes, devem desenvolver um sistema com arquitetura definida e seguindo os critérios elencados abaixo. Esse sistema pode ser desenvolvido para qualquer finalidade ou domínio, sendo permitido o uso da linguagem de programação e do Framework que a equipe julgar mais adequado. A entrega deve ser o link de um vídeo, de até 10 minutos, postado em alguma plataforma de streaming, o link do repositório Git do projeto com seu código fonte (o link do repositório Git pode ser substituído pelo código fonte da aplicação compactado em um arquivo ZIP) e um breve relatório (entregue no formato PDF) apontando como o sistema desenvolvido atende aos requisitos elencados.
 
-###Requisitos:
+### Requisitos:
 
 * Deve-se utilizar a arquitetura MVC ou N-Camadas ou Microsserviços (com APIs)
 * O Sistema deve conter ao menos 3 entidades completas
@@ -11,7 +11,7 @@ Os alunos, organizados em equipes de até 7 integrantes, devem desenvolver um si
 * Deve-se haver ao menos duas regras de negócios modeladas no sistema.
 * Deve haver interação com um banco de dados
 
-##Sobre o Projeto:
+## Sobre o Projeto:
 
 * Desenvolvido em .Net na versão 5.0.407 utilizando a arquiterura MVC com Razor Pages.
 * Para o cumprimento dos requisitos foram implementados:
@@ -30,7 +30,7 @@ Os alunos, organizados em equipes de até 7 integrantes, devem desenvolver um si
     * Um carro não pode ter 2 serviços agendados no mesmo dia.
   * Todos os dados do projeto estão em um banco de dados SQLite.
 
-##Integrantes:
+## Integrantes:
 
 | Nome                            | RA     |
 | ------------------------------- | ------ |
