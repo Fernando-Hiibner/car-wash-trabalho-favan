@@ -60,8 +60,10 @@ namespace Car_Wash.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,DataDeAgendamento,CarroId,ServicoId")] AgendamentoModel agendamentoModel)
         {
-            var carro = _context.CarroModel.Where<CarroModel>(x => x.Id == agendamentoModel.CarroId);
-            CarroModel carroModel = carro.SingleOrDefault();
+            var carroModel = await _context.CarroModel
+                .Include(a => a.Agendamentos)
+                .FirstOrDefaultAsync(c => c.Id == agendamentoModel.CarroId);
+
 
             if (ModelState.IsValid && (carroModel?.InserirAgendamento(agendamentoModel) ?? false))
             {
